@@ -7,6 +7,7 @@ import { JsxElement } from "typescript";
 import ActiveLink from "./ActiveLink";
 import { RiMenuAddLine, RiCloseLine } from "react-icons/ri";
 import { dataContext } from "./Layout";
+// import Navigations from "./Navigations";
 interface NavbarProps {
   (nav: string, index: number): JsxElement;
 }
@@ -26,7 +27,9 @@ const Navbar = ({}) => {
   return (
     <div className={styles.wrapper}>
       <Image alt={"logo"} src={logo} className={styles.img} />
-      <ul>{Navigations()}</ul>
+      <ul>
+        {Navigations() }
+      </ul>
       {toggle ? (
         <div onClick={handleToggle} className={styles.menu}>
           <RiCloseLine />
