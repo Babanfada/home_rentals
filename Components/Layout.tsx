@@ -9,6 +9,9 @@ const Layout: React.FC<any> = ({ children }) => {
   const handleToggle = () => {
     setToggle((prev) => !prev);
   };
+  // const handleToggle2 = () => {
+  //   setToggle(true);
+  // };
   return (
     <dataContext.Provider value={{ toggle, setToggle, handleToggle }}>
       <div>

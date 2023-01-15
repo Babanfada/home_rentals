@@ -7,11 +7,12 @@ import { JsxElement } from "typescript";
 import ActiveLink from "./ActiveLink";
 import { RiMenuAddLine, RiCloseLine } from "react-icons/ri";
 import { dataContext } from "./Layout";
+import { motion, AnimatePresence } from "framer-motion";
 // import Navigations from "./Navigations";
 interface NavbarProps {
   (nav: string, index: number): JsxElement;
 }
-
+//  style={{ display: `${toggle ? "block" : "none"}` }}
 const Navbar = ({}) => {
   const { toggle, setToggle, handleToggle } = React.useContext(dataContext);
   const Navigations = () => {
@@ -27,17 +28,40 @@ const Navbar = ({}) => {
   return (
     <div className={styles.wrapper}>
       <Image alt={"logo"} src={logo} className={styles.img} />
-      <ul>
-        {Navigations() }
-      </ul>
+      <ul>{Navigations()}</ul>
+      <motion.ul
+        style={{
+          display: `${toggle ? "flex" : "none"}`,
+          right: `${toggle && "-3vw"}`,
+          // transition: `${toggle && "3s"}`,
+        }}
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+          transition: { duration: 1, height: "100%" },
+        }}
+        exit={{ opacity: 1 }}
+      >
+        {Navigations()}
+      </motion.ul>
       {toggle ? (
-        <div onClick={handleToggle} className={styles.menu}>
+        <motion.div
+          onClick={handleToggle}
+          className={styles.menu}
+          whileHover={{ scale: 0.9 }}
+        >
           <RiCloseLine />
-        </div>
+        </motion.div>
       ) : (
-        <div onClick={handleToggle} className={styles.menu}>
+        <motion.div
+          onClick={handleToggle}
+          className={styles.menu}
+          whileHover={{ scale: 0.9 }}
+        >
           <RiMenuAddLine />
-        </div>
+        </motion.div>
       )}
     </div>
   );
