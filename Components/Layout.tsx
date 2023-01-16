@@ -8,7 +8,7 @@ const Layout: React.FC<any> = ({ children }) => {
   const [toggle, setToggle] = React.useState<boolean>(false);
   const handleToggle = () => {
     setToggle((prev) => !prev);
-    console.log(toggle)
+    // console.log(toggle)
   };
   // const handleToggle2 = () => {
   //   setToggle(true);
