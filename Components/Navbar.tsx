@@ -18,8 +18,8 @@ const Navbar = ({}) => {
   const Navigations = () => {
     return navList.map((nav, index) => {
       return (
-        <ActiveLink href={nav.link} key={index}>
-          <li>{nav.list}</li>
+        <ActiveLink href={nav.link} key={index} setToggle={setToggle}>
+          <li onClick={() => setToggle(false)}>{nav.list}</li>
         </ActiveLink>
       );
     });
@@ -28,13 +28,8 @@ const Navbar = ({}) => {
   return (
     <div className={styles.wrapper}>
       <Image alt={"logo"} src={logo} className={styles.img} />
-      <ul>{Navigations()}</ul>
       <motion.ul
-        style={{
-          display: `${toggle ? "flex" : "none"}`,
-          right: `${toggle && "-3vw"}`,
-          // transition: `${toggle && "3s"}`,
-        }}
+        className={`${toggle ? styles.ul : ""}`}
         initial={{
           opacity: 0,
         }}
@@ -46,6 +41,7 @@ const Navbar = ({}) => {
       >
         {Navigations()}
       </motion.ul>
+
       {toggle ? (
         <motion.div
           onClick={handleToggle}

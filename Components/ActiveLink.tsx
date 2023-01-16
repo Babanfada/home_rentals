@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-function ActiveLink({ children, href }: any) {
+function ActiveLink({ children, href, setToggle }: any) {
   const router = useRouter();
   const style = {
     // marginRight: 0,
@@ -17,9 +17,11 @@ function ActiveLink({ children, href }: any) {
     e.preventDefault();
     router.push(href);
   };
-
+//   const handleClose = (e: any) => {
+//     setToggle(false);
+//   };
   return (
-    <a href={href} onClick={handleClick} style={style}>
+    <a href={href} onClick={(handleClick)} style={style}>
       {children}
     </a>
   );
