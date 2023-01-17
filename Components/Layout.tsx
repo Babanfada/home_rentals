@@ -6,15 +6,30 @@ interface LayoutProps {}
 
 const Layout: React.FC<any> = ({ children }) => {
   const [toggle, setToggle] = React.useState<boolean>(false);
+  const [background, setbackground] = React.useState<boolean>(false);
   const handleToggle = () => {
     setToggle((prev) => !prev);
     // console.log(toggle)
   };
-  // const handleToggle2 = () => {
-  //   setToggle(true);
-  // };
+  const changebackground = () => {
+    window.scrollY >= 1 ? setbackground(true) : setbackground(false);
+  };
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", changebackground);
+  }, []);
+
   return (
-    <dataContext.Provider value={{ toggle, setToggle, handleToggle }}>
+    <dataContext.Provider
+      value={{
+        toggle,
+        setToggle,
+        handleToggle,
+        background,
+        setbackground,
+        changebackground,
+      }}
+    >
       <div>
         {/* <Navbar /> */}
         <div>{children}</div>

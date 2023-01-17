@@ -5,6 +5,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { BiSearch } from "react-icons/bi";
 import { ReactJSXElement } from "@emotion/react/types/jsx-namespace";
 import styles from "../styles/mapp.module.scss";
+import zIndex from "@mui/material/styles/zIndex";
 
 interface currency {
   value: string;
@@ -53,7 +54,7 @@ export function SelectTextFields(): ReactJSXElement {
     <Box
       component="form"
       sx={{
-        "& .MuiTextField-root": { m: 0, width: "25ch",  },
+        "& .MuiTextField-root": { m: 0, width: "25ch" },
         display: "flex",
         background: "#FFFFFF",
       }}
@@ -67,7 +68,7 @@ export function SelectTextFields(): ReactJSXElement {
           label=""
           defaultValue="Nigeria"
           placeholder="All Type"
-          style={{ width: "fit-content", background: "white" }}
+          style={{ width: "fit-content", background: "transparent" }}
           // helperText="Where are you looking for?"
         >
           {currencies.map((option) => (
@@ -84,7 +85,7 @@ export function SelectTextFields(): ReactJSXElement {
           label=""
           defaultValue="Nigeria"
           placeholder="Neighbourhood"
-          style={{ width: "fit-content", background: "white" }}
+          style={{ width: "fit-content", background: "transparent", zIndex: 0 }}
           // helperText="Where are you looking for?"
         >
           {NeigbourHood.map((option) => (

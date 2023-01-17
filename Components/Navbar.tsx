@@ -14,7 +14,8 @@ interface NavbarProps {
 }
 //  style={{ display: `${toggle ? "block" : "none"}` }}
 const Navbar = ({}) => {
-  const { toggle, setToggle, handleToggle } = React.useContext(dataContext);
+  const { toggle, setToggle, handleToggle, background } =
+    React.useContext(dataContext);
   const Navigations = () => {
     return navList.map((nav, index) => {
       return (
@@ -26,39 +27,44 @@ const Navbar = ({}) => {
   };
 
   return (
-    <div className={styles.wrapper}>
-      <Image alt={"logo"} src={logo} className={styles.img} />
-      <motion.ul
-        className={`${toggle ? styles.ul : ""}`}
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-          transition: { duration: 1, height: "100%" },
-        }}
-        exit={{ opacity: 1 }}
-      >
-        {Navigations()}
-      </motion.ul>
+    <div
+      style={{ background: `${background ? "black" : "transparent"}` }}
+      className={styles.container}
+    >
+      <div className={styles.wrapper}>
+        <Image alt={"logo"} src={logo} className={styles.img} />
+        <motion.ul
+          className={`${toggle ? styles.ul : ""}`}
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+            transition: { duration: 1, height: "100%" },
+          }}
+          exit={{ opacity: 1 }}
+        >
+          {Navigations()}
+        </motion.ul>
 
-      {toggle ? (
-        <motion.div
-          onClick={handleToggle}
-          className={styles.menu}
-          whileHover={{ scale: 0.9 }}
-        >
-          <RiCloseLine />
-        </motion.div>
-      ) : (
-        <motion.div
-          onClick={handleToggle}
-          className={styles.menu}
-          whileHover={{ scale: 0.9 }}
-        >
-          <RiMenuAddLine />
-        </motion.div>
-      )}
+        {toggle ? (
+          <motion.div
+            onClick={handleToggle}
+            className={styles.menu}
+            whileHover={{ scale: 0.9 }}
+          >
+            <RiCloseLine />
+          </motion.div>
+        ) : (
+          <motion.div
+            onClick={handleToggle}
+            className={styles.menu}
+            whileHover={{ scale: 0.9 }}
+          >
+            <RiMenuAddLine />
+          </motion.div>
+        )}
+      </div>
     </div>
   );
 };

@@ -72,9 +72,10 @@
     }
     iframe + div {
       border: 1px solid rgba(0, 0, 0, 0.2);
-    //   border: 1px solid red;
-      width: 100%;
-      
+      // border: 1px solid red;
+      // width: 100%;
+      width: auto;
+      // z-index: -3;
       padding: 15px 1.6vw;
       background-color: white;
     //   background-color: transparent;
@@ -83,7 +84,7 @@
       .search {
         // border: 1px solid red;
         width: 59px;
-        
+        // width: 4.3vw;
         display: grid;
         place-items: center;
         background: #23a6f0;
