@@ -3,8 +3,10 @@ export interface headProp {
   content: string;
 }
 
-export interface navlist {
-  [index: number]: string;
+export interface location {
+  address: string;
+  lat: number;
+  lng: number;
 }
 export const headDetails: headProp[] = [
   {
@@ -43,3 +45,9 @@ export const navList = [
     link: "/contacts",
   },
 ];
+
+export const location:location = {
+  address: "1600 Amphitheatre Parkway, Mountain View, california.",
+  lat: 37.44,
+  lng: -122.08,
+};
