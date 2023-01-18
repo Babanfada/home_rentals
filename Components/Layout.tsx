@@ -26,8 +26,6 @@ const Layout: React.FC<any> = ({ children }) => {
         setToggle,
         handleToggle,
         background,
-        setbackground,
-        changebackground,
       }}
     >
       <div>

@@ -1,4 +1,5 @@
 .container {
+  // width: 105vw;
   width: 100vw;
   height: 100vh;
   background: url("../public/images/home3.jpg"),
@@ -15,6 +16,42 @@
 }
 
 .container2 {
-  height: 809px;
-  border: 1px solid red;
+  width: 100vw;
+  // height: 809px;
+  // border: 1px solid red;
+  background: white;
+  // background: #e5e5e5;
+  padding: 93px 0 93px 8.8vw;
+  .p {
+    // border: 1px solid red;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 64px;
+    position: relative;
+    /* identical to box height, or 178% */
+    text-transform: capitalize;
+    font-feature-settings: "salt" on, "liga" off;
+    /* Text / Gray 900 */
+    color: #18191f;
+    &::before {
+      content: " ";
+      width: 385px;
+      height: 0px;
+      left: 0px;
+      top: 58px;
+      border: 3px solid #f4511e;
+      position: absolute;
+    }
+  }
+
+  p + div {
+    display: flex;
+    @media (max-width: 1050px) {
+      flex-direction: column;
+      // justify-content: center;
+      align-items: center;
+    }
+  }
 }
