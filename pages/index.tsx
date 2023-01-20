@@ -14,6 +14,8 @@ import ActionAreaCard, { Icons } from "../Components/Card";
 // import { perks } from "../Components/Data";
 import { GetServerSideProps, NextPage } from "next";
 import { Box, Pagination, Skeleton } from "@mui/material";
+import GridImage from "../Components/GridImage";
+import Flexibility from "../Components/Flexibility";
 // import home from "../public/images/home.png"
 interface Props {
   posts: any[];
@@ -22,7 +24,7 @@ interface Props {
 //   (e: any, p: number);
 // }
 const Home: NextPage<Props> = ({ posts }) => {
-  console.log(posts)
+  console.log(posts);
   const [pageNumber, setpageNumber] = React.useState(0);
   const usersperpage = 6;
   const pagesVisited = pageNumber * usersperpage;
@@ -34,12 +36,14 @@ const Home: NextPage<Props> = ({ posts }) => {
   };
   return (
     <>
+      {/* Container  1 ....... */}
       <div className={styles.container}>
         <Header id={0} />
         <Navbar />
         <Mapp />
         {/* <Map zoomlevel ={17} /> */}
       </div>
+      {/* Container  2 ....... */}
       <div className={styles.container2}>
         <p className={styles.p}>
           Minimum living cost to take care of eveything
@@ -49,6 +53,7 @@ const Home: NextPage<Props> = ({ posts }) => {
           <Perks />
         </div>
       </div>
+      {/* Container  3 ....... */}
       <div className={styles.container3}>
         <div className={styles.divs}>
           <p className={styles.p}>List of Properties</p>
@@ -59,7 +64,7 @@ const Home: NextPage<Props> = ({ posts }) => {
         {posts ? (
           <div className={styles.action}>
             {displayUsers.map((post, index) => {
-              return <ActionAreaCard key={index} post={post}/>;
+              return <ActionAreaCard key={index} post={post} />;
             })}
           </div>
         ) : (
@@ -91,6 +96,13 @@ const Home: NextPage<Props> = ({ posts }) => {
           shape="rounded"
           className={styles.pagination}
         />
+      </div>
+      {/* Container  4 ....... */}
+      <div className={styles.container4}>
+        <div className={ styles.inner}>
+          <GridImage />
+          <Flexibility />
+        </div>
       </div>
     </>
   );

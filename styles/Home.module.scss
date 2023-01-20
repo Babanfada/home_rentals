@@ -95,7 +95,7 @@
     }
   }
   .action {
-    border: 1px solid red;
+    // border: 1px solid red;
     margin-top: 75px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -114,4 +114,23 @@
   display: flex;
   justify-content: center;
   padding: 5vh;
+}
+
+.container4 {
+  // height: fit-content;
+  background: white;
+  // border: 3px solid red;
+  display: grid;
+  place-content: center;
+
+  
+  .inner {
+    width: 82.7vw;
+    // height: 710px;
+    // border: 3px solid yellow;
+    display: flex;
+    @media(max-width:1250px){
+      flex-direction: column;
+    }
+  }
 }

@@ -4,6 +4,11 @@ import icon3 from "../public/images/icon3.png";
 import icon4 from "../public/images/icon4.png";
 import icon5 from "../public/images/icon5.png";
 import icon6 from "../public/images/icon6.png";
+
+import home3 from "../public/images/home3.jpg";
+import home4 from "../public/images/home4.jpg";
+import home5 from "../public/images/home5.jpg";
+import home6 from "../public/images/home6.jpg";
 import { MdOutlineKingBed, MdOutlineWindow } from "react-icons/md";
 import { FaShower } from "react-icons/fa";
 
@@ -103,6 +108,45 @@ export const cardIconData = [
   },
 ];
 
+export const homes = [
+  {
+    img: home3,
+    display:"",
+    lable: "flexible leases",
+    // width: "18.3vw",
+    // height: "",
+    width: 250,
+    height: 334,
+  },
+  {
+    img: home4,
+    display:"",
+    lable: "7-days happiness guaranteed",
+    // width: "19.7vw",
+    // height: "",
+    width: 270,
+    height: 270,
+  },
+  {
+    img: home5,
+    display:"",
+    lable: "monthly house cleaning",
+    // width: "15.5vw",
+    // height: "",
+    width: 212,
+    height: 285,
+  },
+  {
+    img: home6,
+    display:"none",
+    lable: "choose your own room mate",
+    // width: "24.5vw",
+    // height: "",
+    width: 338,
+    height: 356,
+  },
+];
+
 import { styled } from "@mui/material/styles";
 import { JsxElement } from "typescript";
 import Button, { ButtonProps } from "@mui/material/Button";
@@ -118,7 +162,50 @@ export const BootstrapButton = styled(Button)({
   lineHeight: 1.5,
   backgroundColor: "#F4511E",
   borderColor: "#F4511E",
-  borderradius: "5px",
+  borderRadius: "5px",
+  fontWeight: 500,
+  // fontFamily: "'Manrope', sans-serif",
+  // boxShadow: "0px 20px 13px rgba(248, 90, 71, 0.035)",
+  fontFamily: [
+    "'Manrope', sans-serif",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    '"Segoe UI"',
+    "Roboto",
+    '"Helvetica Neue"',
+    "Arial",
+    "sans-serif",
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ].join(","),
+  "&:hover": {
+    backgroundColor: "#F4511E",
+    borderColor: "#F4511E",
+    boxShadow: "none",
+  },
+  "&:active": {
+    boxShadow: "none",
+    backgroundColor: "F4511E",
+    borderColor: "F4511E",
+  },
+  "&:focus": {
+    boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
+  },
+});
+export const BootstrapButton2 = styled(Button)({
+  width: "200px",
+  height: "65px",
+  color:"white",
+  boxShadow: "none",
+  textTransform: "none",
+  fontSize: 17,
+  padding: "6px 12px",
+  border: "1px solid",
+  lineHeight: 1.5,
+  backgroundColor: "#F4511E",
+  borderColor: "#F4511E",
+  borderRadius: "13px",
   fontWeight: 500,
   // fontFamily: "'Manrope', sans-serif",
   // boxShadow: "0px 20px 13px rgba(248, 90, 71, 0.035)",
