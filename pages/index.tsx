@@ -9,7 +9,11 @@ import Navbar from "../Components/Navbar";
 import Perks from "../Components/Perks";
 import styles from "../styles/Home.module.scss";
 import image1 from "../public/images/image1.png";
-import { BootstrapButton } from "../Components/Data";
+import {
+  BootstrapButton,
+  landlordData,
+  BootstrapButton3,
+} from "../Components/Data";
 import ActionAreaCard, { Icons } from "../Components/Card";
 // import { perks } from "../Components/Data";
 import { GetServerSideProps, NextPage } from "next";
@@ -99,9 +103,39 @@ const Home: NextPage<Props> = ({ posts }) => {
       </div>
       {/* Container  4 ....... */}
       <div className={styles.container4}>
-        <div className={ styles.inner}>
+        <div className={styles.inner}>
           <GridImage />
           <Flexibility />
+        </div>
+        <p className={styles.p}>
+          Your property with us and be Confident that Your Room will be Filled
+          Out!
+        </p>
+        <div className={styles.inner2}>
+          <h1>Add A New Property Address</h1>
+          <form action="" method="post">
+            <div className={styles.property}>
+              {landlordData.map((landlord, index) => {
+                return (
+                  <div
+                    style={{
+                      display: "grid",
+                      gridColumn: landlord.grid,
+                    }}
+                    className={styles.div}
+                    key={index}
+                  >
+                    <span className={styles.span}>
+                      {landlord.label}{" "}
+                      <span style={{ color: "#F4511E" }}>*</span>
+                    </span>
+                    <span>{landlord.textField}</span>
+                  </div>
+                );
+              })}
+            </div>
+            <BootstrapButton3 >Add New Property</BootstrapButton3>
+          </form>
         </div>
       </div>
     </>
