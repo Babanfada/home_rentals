@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
-  padding-top: 5vh;
+  padding-top: 110px;
   @media (max-width: 826px) {
     grid-template-columns: 1fr;
     gap: 5vh;
