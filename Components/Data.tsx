@@ -156,8 +156,6 @@ export const homes = [
   },
 ];
 
-
-
 export const landlordData = [
   {
     id: 1,
@@ -263,7 +261,7 @@ export const landlordData = [
         multiline
         minRows={5}
         style={{
-          width: 918,
+          width: "73.49vw",
           minHeight: 147,
           background: "#F9F9F9",
           // border: "1px solid red",
@@ -275,25 +273,30 @@ export const landlordData = [
     id: 8,
     grid: `span 3`,
     label: "Upload Photos",
+    // textField: <input type={"file"}  hidden/>
     textField: (
       <TextField
         type={"file"}
         id={"outlined-multiline-flexible"}
         placeholder="Enter Description"
-        variant="outlined"
+        variant="filled"
         required
-        // multiline
         minRows={5}
+        InputProps={{
+          disableUnderline: true,
+          style: { background: "rgba(244, 81, 30, 0.01)" },
+        }}
         style={{
-          width: 918,
-          minHeight: 56,
-          background: "#F9F9F9",
-          // border: "1px solid red",
+          width: "73.49vw",
+          minHeight: "102px",
+          background: "rgba(244, 81, 30, 0.01)",
+          border: "1px dashed #F4511E",
+          borderRadius: "10px",
+          // visibility: "hidden",
         }}
       />
     ),
   },
-  
 ];
 
 export const BootstrapButton = styled(Button)({
@@ -383,7 +386,7 @@ export const BootstrapButton2 = styled(Button)({
 });
 
 export const BootstrapButton3 = styled(Button)({
-  width: "513px",
+  width: "37.5vw",
   height: "69px",
   color: "white",
   boxShadow: "none",
@@ -396,6 +399,7 @@ export const BootstrapButton3 = styled(Button)({
   borderColor: "#F4511E",
   borderRadius: "9px",
   fontWeight: 500,
+  marginBottom: 73.7,
   // fontFamily: "'Manrope', sans-serif",
   // boxShadow: "0px 20px 13px rgba(248, 90, 71, 0.035)",
   fontFamily: [

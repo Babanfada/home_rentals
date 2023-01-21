@@ -39,7 +39,7 @@ const Home: NextPage<Props> = ({ posts }) => {
     setpageNumber(p);
   };
   return (
-    <>
+    <div style={{ background: "white" }}>
       {/* Container  1 ....... */}
       <div className={styles.container}>
         <Header id={0} />
@@ -134,11 +134,15 @@ const Home: NextPage<Props> = ({ posts }) => {
                 );
               })}
             </div>
-            <BootstrapButton3 >Add New Property</BootstrapButton3>
+            <BootstrapButton3>Add New Property</BootstrapButton3>
           </form>
         </div>
       </div>
-    </>
+      {/* CONTAINER 5..... */}
+      <div className={styles.container5}>
+        
+      </div>
+    </div>
   );
 };
 
