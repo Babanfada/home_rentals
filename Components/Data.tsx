@@ -4,11 +4,14 @@ import icon3 from "../public/images/icon3.png";
 import icon4 from "../public/images/icon4.png";
 import icon5 from "../public/images/icon5.png";
 import icon6 from "../public/images/icon6.png";
-
 import home3 from "../public/images/home3.jpg";
 import home4 from "../public/images/home4.jpg";
 import home5 from "../public/images/home5.jpg";
 import home6 from "../public/images/home6.jpg";
+import person1 from "../public/images/person1.jpg";
+import person2 from "../public/images/person2.jpg";
+import person3 from "../public/images/person3.jpg";
+
 import { MdOutlineKingBed, MdOutlineWindow } from "react-icons/md";
 import { FaShower } from "react-icons/fa";
 import { styled } from "@mui/material/styles";
@@ -429,3 +432,21 @@ export const BootstrapButton3 = styled(Button)({
     boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
   },
 });
+
+export const swiperData = [
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum nisl et nunc facilisis, a commodo eros mollis. Nunc vel pellentesque est. Curabitur at odio sit amet libero vulputate efficitur ac nec justo. Nulla vitae mauris quam. Nulla quam massa, faucibus id pretium ac, mattis eu velit. Donec sed risus a lacus fringilla finibus.",
+    name: "Harry Wilson",
+    img: person1,
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum nisl et nunc facilisis, a commodo eros mollis. Nunc vel pellentesque est. Curabitur at odio sit amet",
+    name: "Christopher Campbell",
+    img: person2,
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam interdum nisl et nunc facilisis, a commodo eros",
+    name: "Sergio Paulo",
+    img: person3,
+  },
+];

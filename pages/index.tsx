@@ -20,6 +20,7 @@ import { GetServerSideProps, NextPage } from "next";
 import { Box, Pagination, Skeleton } from "@mui/material";
 import GridImage from "../Components/GridImage";
 import Flexibility from "../Components/Flexibility";
+import Testimony from "../Components/swiper";
 // import home from "../public/images/home.png"
 interface Props {
   posts: any[];
@@ -140,7 +141,14 @@ const Home: NextPage<Props> = ({ posts }) => {
       </div>
       {/* CONTAINER 5..... */}
       <div className={styles.container5}>
-        
+        <Testimony />
+        <iframe
+          src="https://www.youtube.com/embed/pv3ta13B6Ww"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
       </div>
     </div>
   );
