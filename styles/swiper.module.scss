@@ -1,10 +1,60 @@
 .mySwiper {
-  border: 1px solid blue;
+  // border: 4px solid blue;
   color: black;
   flex-basis: 50%;
-  .div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100vw;
+  .swiper {
+    // border: 3px solid red;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    width: 100vw;
+    .div {
+      width: fit-content;
+      // border: 4px solid yellow;
+      padding: 130px 38px 166px 129px;
+      @media(max-width:1200px){
+        padding: 30px;
+      }
+      p {
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 36px;
+        // width: 100vw;
+        color: #18191f;
+        margin-bottom: 26px;
+        white-space: wrap;
+        // width: 100vw;
+        
+      }
+
+      .div2 {
+        display: flex;
+        gap: 19px;
+        .div3 {
+          .span1 {
+            font-family: "Inter", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;
+            /* identical to box height, or 156% */
+            color: #f4511e;
+          }
+          .span2 {
+            font-family: "Inter", sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;
+            color: black;
+          }
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
   }
 }

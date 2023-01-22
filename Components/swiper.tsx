@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Pagination } from "swiper";
 import { Avatar } from "@mui/material";
-import styles from "../styles/swiper.module.scss"
+import styles from "../styles/swiper.module.scss";
 import Image from "next/image";
 export default function Testimony() {
   return (
@@ -25,17 +25,25 @@ export default function Testimony() {
       >
         {swiperData.map((testimonial, index) => {
           return (
-            <SwiperSlide key={index}>
+            <SwiperSlide className={styles.swiper} key={index}>
               <div className={styles.div}>
                 <p>{testimonial.text}</p>
-                <div>
-                  <Avatar >
-                    <Image src={testimonial.img} alt="draft" />
+                <div className={styles.div2}>
+                  <Avatar
+                    sx={{ width: 61, height: 61 }}
+                    // src={testimonial.img}
+                    alt="draft"
+                  >
+                    <Image
+                      style={{ width: 61, height: 61 }}
+                      src={testimonial.img}
+                      alt="draft"
+                    />
                   </Avatar>
-                  <div>
-                    <span>{testimonial.name}</span>
-                    <span>Property Owner</span>
-                  </div>
+                  <span className={styles.div3}>
+                    <span className={styles.span1}>{testimonial.name}</span>
+                    <span className={styles.span2}>Property Owner</span>
+                  </span>
                 </div>
               </div>
             </SwiperSlide>
