@@ -21,6 +21,7 @@ import { Box, Pagination, Skeleton } from "@mui/material";
 import GridImage from "../Components/GridImage";
 import Flexibility from "../Components/Flexibility";
 import Testimony from "../Components/swiper";
+import Footer from "../Components/Footer";
 // import home from "../public/images/home.png"
 interface Props {
   posts: any[];
@@ -149,6 +150,11 @@ const Home: NextPage<Props> = ({ posts }) => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
+      </div>
+
+      {/* container 6 ....... */}
+      <div className={styles.container6}>
+        <Footer />
       </div>
     </div>
   );

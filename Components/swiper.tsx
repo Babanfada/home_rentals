@@ -20,6 +20,7 @@ export default function Testimony() {
         pagination={{
           dynamicBullets: true,
         }}
+        grabCursor={true}
         modules={[Pagination]}
         className={styles.mySwiper}
       >

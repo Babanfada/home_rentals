@@ -4,6 +4,9 @@ import icon3 from "../public/images/icon3.png";
 import icon4 from "../public/images/icon4.png";
 import icon5 from "../public/images/icon5.png";
 import icon6 from "../public/images/icon6.png";
+import icon7 from "../public/images/icon7.png";
+import icon8 from "../public/images/icon8.png";
+import icon9 from "../public/images/icon9.png";
 import home3 from "../public/images/home3.jpg";
 import home4 from "../public/images/home4.jpg";
 import home5 from "../public/images/home5.jpg";
@@ -14,6 +17,7 @@ import person3 from "../public/images/person3.jpg";
 
 import { MdOutlineKingBed, MdOutlineWindow } from "react-icons/md";
 import { FaShower } from "react-icons/fa";
+import { HiLocationMarker } from "react-icons/hi";
 import { styled } from "@mui/material/styles";
 import { JsxElement } from "typescript";
 import Button, { ButtonProps } from "@mui/material/Button";
@@ -450,3 +454,23 @@ export const swiperData = [
     img: person3,
   },
 ];
+
+export const footerData = [
+  {
+    label: "345 Faulconer Drive, Suite 4 • Charlottesville, CA, 12345",
+    icon: icon7,
+    span: "span 2"
+  },
+  {
+    label: "+2347038626576",
+    icon: icon8,
+    span:""
+  },
+  {
+    label: "+2347038626576",
+    icon: icon9,
+    span:""
+  },
+];
+
+export const footerData2 =["ABOUT US", "CONTACT US", "HELP","PRIVACY POLICY", "DISCLAIMER"]
